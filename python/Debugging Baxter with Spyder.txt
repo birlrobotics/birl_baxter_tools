@@ -1,0 +1,10 @@
+To debug with spyder and baxter:
+
+1. Open a terminal					Ctrl+Alt+T
+2. Go to the baxter_ws: 				$ cd ~/ros/indigo/baxter_ws
+3. Start the sim baxter scripts: 			$ ./baxter.sh sim
+4. Open spyder from within this environment: 		$ spyder
+5. If your script needs any args, 
+6. Press F6 and type in "command line options"
+7. Insert a breakpoint somewhere
+8. Step through the code with icons or keys (Ctrl+F5/F10/F11)

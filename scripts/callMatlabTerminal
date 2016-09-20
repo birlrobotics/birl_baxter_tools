@@ -1,0 +1,1 @@
+matlab -r 'try funcName(arg1,arg2,...,argN); catch; end;'

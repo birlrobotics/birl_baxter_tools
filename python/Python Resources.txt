@@ -1,0 +1,39 @@
+Where to start with Python:
+
+1) Comprehensive Python Course
+http://www.python-course.eu/
+
+2) Python's Standard Tutorial
+https://docs.python.org/2/tutorial/
+
+3) SciPy: Python's ecosystem of math, science, and engineering
+http://scipy.org/
+
+4) Numpy: Python's Scientific Computing Package
+http://www.numpy.org/
+
+5) Matplotlib: Comprehensive 2D Plotting
+http://matplotlib.org/
+
+6) IDEs
+IPython: Tool for interactivity. Useful in python.
+http://ipython.org/
+
+Spyder: 
+https://github.com/spyder-ide/spyder
+
+7) GUI
+TKinter: Used to create graphical user interfaces.
+https://wiki.python.org/moin/TkInter
+
+8) Of Interest:
+
+- Differences between Matlab and Python
+http://wiki.scipy.org/NumPy_for_Matlab_Users
+
+- Python is a "pass-by-object-reference" language, not a PBV or PBR
+http://robertheaton.com/2014/02/09/pythons-pass-by-object-reference-as-explained-by-philip-k-dick/
+http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html#other-languages-have-variables
+
+- Python Standard Library
+https://docs.python.org/2/library/

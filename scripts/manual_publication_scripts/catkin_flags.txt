@@ -1,0 +1,3 @@
+catkin_make -DCATKIN_WHITELIST_PACKAGES="foo;bar"
+-DCMAKE_BUILD_TYPE=Debug
+set(CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS}")

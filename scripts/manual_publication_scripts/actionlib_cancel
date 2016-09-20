@@ -1,0 +1,4 @@
+rostopic pub /robot/limb/right/follow_joint_trajectory/cancel actionlib_msgs/GoalID "stamp:
+  secs: 0
+  nsecs: 0
+id: ''"

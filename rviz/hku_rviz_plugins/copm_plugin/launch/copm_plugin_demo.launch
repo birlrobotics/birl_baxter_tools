@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find copm_plugin)/rviz/copm_plugin_demo.rviz"/>
+  <node pkg="copm_plugin" type="copm_demo.py" name="copm_demo"/>
+</launch>

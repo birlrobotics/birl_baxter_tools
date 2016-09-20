@@ -1,0 +1,7 @@
+<stack>
+  <description brief="Plugins for RVIZ">
+    Custom plugins for RVIZ
+  </description>
+  <author>Hong Kong University Team</author>
+  <depend stack="ros"/>
+</stack>

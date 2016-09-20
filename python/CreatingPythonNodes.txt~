@@ -1,0 +1,25 @@
+1) add setup.py in the parent folder. 
+- change content to point to the name of your package.
+- make executable: chmod +x filename.py
+
+2) CMakeLists.txt
+- add line to include catkin_python_setup()
+
+3) package.xml
+- add a line: <build_depend>rospy</build_depend>
+- add a line <run_depend>rospy</run_depend>
+
+4) create a "scripts" folder in the parent folder
+- create your python executable here
+- make executable: chmod +x filename.py
+- inside code include rospy
+--------------------------------------------
+import rospy
+--------------------------------------------
+
+5) inside the src folder:
+- create a new subfolder with the same name of your package
+- cd to the new subfolder
+- create an empty __init__.py folder using touch:
+
+touch __init__.py

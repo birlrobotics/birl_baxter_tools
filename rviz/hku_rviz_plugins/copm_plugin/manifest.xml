@@ -1,0 +1,23 @@
+<package>
+  <description brief="copm_plugin">
+
+     copm_plugin
+
+  </description>
+  <author>Devin Schwab</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/copm_plugin</url>
+  <depend package="roscpp"/>
+  <depend package="rviz"/>
+  <depend package="message_filters"/>
+  <depend package="geometry_msgs"/>
+  <depend package="class_loader"/>
+
+  <export>
+    <rviz plugin="${prefix}/plugin_description.xml"/>    
+  </export>
+
+</package>
+
+

@@ -1,0 +1,22 @@
+<launch>
+  <!-- ROS spacenav driver -->
+  <node pkg="spacenav_node" type="spacenav_node" name="spacenav_node"/>
+
+  <!-- Takes care of the transform for the cylinder marker's frame -->
+  <node pkg="spacenav_rviz_controller" type="rviz_controller" name="cylinder_cursor">
+    <param name="parent_frame" type="string" value="pelvis"/>
+    <param name="translational_sensitivity" type="double" value=".0001"/>
+    <param name="angular_sensitivity" type="double" value=".001"/>
+  </node>
+  <node pkg="spacenav_rviz_controller" type="spacenav_cursor_ui.py" name="cylinder_cursor_ui" args="cylinder_cursor"/>
+
+  <!-- Actually does the cylinder marker publishing and button click listener -->
+  <node pkg="point_cloud_selector" type="cylinder_selector" name="cylinder_selector"/>
+  <node pkg="point_cloud_selector" type="cylinder_selector_ui.py" name="cylinder_select_ui"/>
+
+  <!-- RVIZ with example configuration -->
+  <node pkg="rviz" type="rviz" name="cylinder_placer_rviz" args="-d $(find point_cloud_selector)/rviz/cylinder_selector.vcg"/>
+
+  <!-- This server listens for a cylinder selection -->
+  <node pkg="point_cloud_selector" type="cylinder_properties_server" name="cylinder_properties_server" output="screen"/>
+</launch>

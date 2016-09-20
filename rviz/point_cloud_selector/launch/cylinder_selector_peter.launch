@@ -1,0 +1,40 @@
+<launch>
+  <!-- ROS spacenav driver -->
+  <node pkg="spacenav_node" type="spacenav_node" name="spacenav_node"/>
+
+  <node pkg="spacenav_mux" type="spacenav_mux" name="spacenav_mux">
+      <param name="channels" type="string" value="cylinder_cursor"/>
+      <param name="selected_channel" type="string" value="cylinder_cursor"/>
+  </node>
+
+  <node pkg="spacenav_mux" type="spacenav_mux_gui.py" name="spacenav_mux_gui"/>
+
+  <!-- Takes care of the transform for the cylinder marker's frame -->
+  <node pkg="spacenav_rviz_controller" type="rviz_controller" name="cylinder_cursor">
+    <!-- These allow the spacenav_mux to be used -->
+    <remap from="spacenav/joy" to="cylinder_cursor/spacenav/joy"/>
+    <remap from="spacenav/offset" to="cylinder_cursor/spacenav/offset"/>
+    <remap from="spacenav/rot_offset" to="cylinder_cursor/spacenav/rot_offset"/>
+    <remap from="spacenav/twist" to="cylinder_cursor/spacenav/twist"/>    
+
+    <param name="parent_frame" type="string" value="pelvis"/>
+    <param name="translational_sensitivity" type="double" value=".0001"/>
+    <param name="angular_sensitivity" type="double" value=".001"/>
+  </node>
+  <node pkg="spacenav_rviz_controller" type="spacenav_cursor_ui.py" name="cylinder_cursor_ui" args="cylinder_cursor"/>
+
+  <!-- Actually does the cylinder marker publishing and button click listener -->
+  <node pkg="point_cloud_selector" type="cylinder_selector" name="cylinder_selector">
+    <!-- These allow the spacenav_mux to be used -->
+    <remap from="spacenav/joy" to="cylinder_cursor/spacenav/joy"/>
+    <remap from="spacenav/offset" to="cylinder_cursor/spacenav/offset"/>
+    <remap from="spacenav/rot_offset" to="cylinder_cursor/spacenav/rot_offset"/>
+    <remap from="spacenav/twist" to="cylinder_cursor/spacenav/twist"/>    
+  </node>
+  <node pkg="point_cloud_selector" type="cylinder_selector_ui.py" name="cylinder_select_ui"/>
+
+	
+  <!-- This server listens for a cylinder selection -->
+  <!-- REPLACE ME -->
+  <node pkg="point_cloud_selector" type="cylinder_properties_server" name="cylinder_properties_server" output="screen"/>
+</launch>

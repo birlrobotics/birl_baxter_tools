@@ -1,0 +1,1 @@
+rostopic pub -r 10 /robot/limb/right/suppress_collision_avoidance std_msgs/Empty

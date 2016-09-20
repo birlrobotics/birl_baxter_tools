@@ -1,0 +1,4 @@
+rostopic pub -r 1000 /robot/limb/right/joint_command baxter_core_msgs/JointCommand '{mode: 1, command: [0.1744], names: ['right_s0']}'
+
+rostopic pub -r 1000 /robot/limb/right/joint_command baxter_core_msgs/JointCommand '{mode: 1, command: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], names: ['right_s0', 'right_s1', 'right_e0', 'right_e1', 'right_w0', 'right_w1', 'right_w2']}'
+

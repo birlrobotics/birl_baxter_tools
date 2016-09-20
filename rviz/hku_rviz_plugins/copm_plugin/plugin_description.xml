@@ -1,0 +1,9 @@
+<library path="lib/libcopm_plugin">
+  <class name="copm_plugin/CoPM Display"
+	 type="copm_plugin::CopmDisplay"
+	 base_class_type="rviz::Display">
+    <description>
+      Displays a marker for Center of Pressure or Center of Mass
+    </description>
+  </class>
+</library>

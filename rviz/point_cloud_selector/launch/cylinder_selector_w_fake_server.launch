@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find point_cloud_selector)/launch/cylinder_selector.launch"/>
+  <node pkg="point_cloud_selector" type="cylinder_properties_server" name="cylinder_properties_server" output="screen"/>
+</launch>
