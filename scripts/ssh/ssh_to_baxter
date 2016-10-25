@@ -1,0 +1,4 @@
+# If you want to ssh to baxter do:
+ssh ruser@011405P0002.local
+
+# Then type "rethink" as password without the quotes.
