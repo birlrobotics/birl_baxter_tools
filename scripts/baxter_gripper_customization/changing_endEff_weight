@@ -1,0 +1,3 @@
+# To change the actual end_effector's weight (not the gripped object's weight), issue the following command once, with a different mass value. Here we use 08.432 as an example.
+
+rostopic pub -1 /robot/end_effector/right_gripper/command baxter_core_msgs/EndEffectorCommand '{ id : 131073,  command : "configure", args : "{ \"urdf\":{ \"name\": \"right_gripper_mass\",  \"link\": [ { \"name\": \"right_hand\" }, { \"name\": \"right_gripper_mass\", \"inertial\": { \"mass\": { \"value\": 0.8342 }, \"origin\": { \"xyz\": [0.0014, 0.0, 0.074] } } } ] }}"}'
