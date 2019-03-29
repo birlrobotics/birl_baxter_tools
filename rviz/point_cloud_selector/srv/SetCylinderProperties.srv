@@ -1,5 +1,0 @@
-float64 height
-float64 radius
-std_msgs/ColorRGBA color
----
-# Empty
